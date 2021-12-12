@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import utilStyles from '../styles/utils.css.js'
 
 export const Container = styled.div`
 	min-height: 100vh;
@@ -42,7 +43,7 @@ export const Anchor = styled.a`
 	text-decoration: none;
 `
 
-export const Title = styled.h1`
+export const Titles = styled.h1`
 	margin: 0;
 	line-height: 1.15;
 	font-size: 4rem;
@@ -124,4 +125,7 @@ export const CardAnchor = styled.a`
 
 export const Logo = styled.img`
 	height: 1em;
+`
+export const Section = styled.section`
+	${utilStyles.headingMd}
 `
