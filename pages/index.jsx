@@ -15,16 +15,17 @@ export default function Home() {
 				<Titles>
 					Read{' '}
 					<Link href={'/posts/first-post'}>
-						<a>First post</a>
+						<a>"First" post</a>
 					</Link>
 				</Titles>
 			</Main>
 
 			<Section>
-				<p>Akif</p>
+				<p>Shu Uesugi</p>
 				<p>
-					(This is a sample website - you’ll be building a site like this on{' '}
-					<a href='https://nextjs.org/learn'>our Next.js tutorial</a>.)
+					Hello, I’m <strong>Shu</strong>. I’m a software engineer and a
+					translator (English/Japanese). You can contact me on{' '}
+					<a href='https://twitter.com/chibicode'>Twitter</a>.
 				</p>
 			</Section>
 		</Layout>

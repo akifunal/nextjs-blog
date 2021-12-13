@@ -10,7 +10,7 @@ import {
 	StyledImage,
 } from './layout.css'
 
-const name = 'Akif'
+const name = 'Shu Uesugi'
 export const siteTitle = 'Next.js Sample Website'
 
 const Layout = ({ children, home }) => {
