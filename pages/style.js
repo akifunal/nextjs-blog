@@ -65,6 +65,10 @@ export const Titles = styled.h1`
 	}
 `
 
+export const Heading2 = styled.h2`
+	${utilStyles.headingLg}
+`
+
 export const Description = styled.p`
 	line-height: 1.5;
 	font-size: 1.5rem;
@@ -126,6 +130,16 @@ export const CardAnchor = styled.a`
 export const Logo = styled.img`
 	height: 1em;
 `
+
 export const Section = styled.section`
 	${utilStyles.headingMd}
+	${utilStyles.padding1px}
+`
+
+export const List = styled.ul`
+	${utilStyles.list}
+`
+
+export const ListItem = styled.li`
+	${utilStyles.listItem}
 `
