@@ -2,24 +2,16 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { getSortedPostsData } from '../lib/posts'
 import Layout from '../components/Layout'
+import { siteTitle } from '../components/Layout'
 import { Main, Section, Titles, Heading2, List, ListItem } from './style'
 
 export default function Home({ allPostsData }) {
 	return (
 		<Layout home>
 			<Head>
-				<title>Create Next App</title>
+				<title>{siteTitle}</title>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-
-			<Main>
-				<Titles>
-					Read{' '}
-					<Link href={'/posts/first-post'}>
-						<a>"First" post</a>
-					</Link>
-				</Titles>
-			</Main>
 
 			<Section>
 				<p>Shu Uesugi</p>
@@ -29,6 +21,7 @@ export default function Home({ allPostsData }) {
 					<a href='https://twitter.com/chibicode'>Twitter</a>.
 				</p>
 			</Section>
+
 			<Section>
 				<Heading2>Blog</Heading2>
 				<List>
