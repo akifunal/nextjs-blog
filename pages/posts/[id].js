@@ -1,28 +1,24 @@
 import Head from 'next/head'
-import Link from 'next/link'
 import Layout from '../../components/layout'
+import Date from '../../components/Date'
+import { H1, DateContainer } from './[id].css'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 
-const Post = ({ date, id, title }) => {
-	return (
-		// <Layout home={false}>
-		// 	<Head>
-		// 		<title>{title}</title>
-		// 	</Head>
-		// 	<h1>First Post</h1>
-		// 	<h2>
-		// 		<Link href='/'>
-		// 			<a>Back to home</a>
-		// 		</Link>
-		// 	</h2>
-		// </Layout>
+const Post = ({ postData }) => {
+	const { date, title, contentHtml } = postData
 
+	return (
 		<Layout home={false}>
-			{title}
-			<br />
-			{id}
-			<br />
-			{date}
+			<Head>
+				<title>{title}</title>
+			</Head>
+			<article>
+				<H1>{title}</H1>
+				<DateContainer>
+					<Date dateString={date} />
+				</DateContainer>
+				<div dangerouslySetInnerHTML={{ __html: contentHtml }} />
+			</article>
 		</Layout>
 	)
 }
@@ -32,19 +28,17 @@ export const getStaticPaths = async () => {
 
 	return {
 		paths,
-		fallback: false,
+		fallback: true,
 	}
 }
 
 export const getStaticProps = async ({ params }) => {
 	// @ts-ignore
-	const { id, title, date } = getPostData(params.id)
+	const postData = await getPostData(params.id)
 
 	return {
 		props: {
-			id: params.id,
-			title: title,
-			date: date,
+			postData: postData,
 		},
 	}
 }

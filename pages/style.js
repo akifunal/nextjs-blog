@@ -143,3 +143,7 @@ export const List = styled.ul`
 export const ListItem = styled.li`
 	${utilStyles.listItem}
 `
+
+export const Small = styled.small`
+	${utilStyles.lightText}
+`
