@@ -8,7 +8,7 @@ import {
 	Header,
 	NameAnchor,
 	StyledImage,
-} from './layout.css'
+} from './Layout.css'
 
 const name = 'Shu Uesugi'
 export const siteTitle = 'Next.js Sample Website'

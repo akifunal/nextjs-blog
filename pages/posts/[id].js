@@ -1,8 +1,9 @@
 import Head from 'next/head'
-import Layout from '../../components/layout'
+import Layout from '../../components/Layout'
 import Date from '../../components/Date'
 import { H1, DateContainer } from './[id].css'
 import { getAllPostIds, getPostData } from '../../lib/posts'
+import Script from 'next/script'
 
 const Post = ({ postData }) => {
 	const { date, title, contentHtml } = postData
@@ -12,6 +13,13 @@ const Post = ({ postData }) => {
 			<Head>
 				<title>{title}</title>
 			</Head>
+			<Script
+				src='https://connect.facebook.net/en_US/sdk.js'
+				strategy='lazyOnload'
+				onLoad={() =>
+					console.log(`script loaded correctly, window.FB has been populated`)
+				}
+			/>
 			<article>
 				<H1>{title}</H1>
 				<DateContainer>
