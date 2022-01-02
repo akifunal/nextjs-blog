@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Script from 'next/script'
-import Layout from '../../components/Layout.jsx'
-import Date from '../../components/Date.jsx'
+import Layout from '../../components/layout'
+import Date from '../../components/date'
 import Style from '../../styles/pages/posts'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 

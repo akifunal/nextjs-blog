@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
-import Style from './Layout.css'
+import Style from './layout.css'
 
 const { BackToHome, Container, H1, H2, Header, NameAnchor, StyledImage } = Style
 
