@@ -5,7 +5,7 @@ import Style from './layout.css'
 
 const { BackToHome, Container, H1, H2, Header, NameAnchor, StyledImage } = Style
 
-const name = 'Shu Uesugi'
+const name = 'Shu Uesugi 12 test'
 export const siteTitle = 'Next.js Sample Website'
 
 const Layout = ({ children, home }) => {
