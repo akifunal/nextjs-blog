@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import utilStyles from '../styles/utils.css.js'
+import utilStyles from '../utils.css.js'
 
-export const Container = styled.div`
+const Container = styled.div`
 	min-height: 100vh;
 	padding: 0 0.5rem;
 	display: flex;
@@ -10,7 +10,7 @@ export const Container = styled.div`
 	align-items: center;
 `
 
-export const Main = styled.main`
+const Main = styled.main`
 	padding: 5rem 0;
 	flex: 1;
 	display: flex;
@@ -19,7 +19,7 @@ export const Main = styled.main`
 	align-items: center;
 `
 
-export const Footer = styled.footer`
+const Footer = styled.footer`
 	width: 100%;
 	height: 100px;
 	border-top: 1px solid #eaeaea;
@@ -38,12 +38,12 @@ export const Footer = styled.footer`
 	}
 `
 
-export const Anchor = styled.a`
+const Anchor = styled.a`
 	color: inherit;
 	text-decoration: none;
 `
 
-export const Titles = styled.h1`
+const Titles = styled.h1`
 	margin: 0;
 	line-height: 1.15;
 	font-size: 4rem;
@@ -65,16 +65,16 @@ export const Titles = styled.h1`
 	}
 `
 
-export const Heading2 = styled.h2`
+const Heading2 = styled.h2`
 	${utilStyles.headingLg}
 `
 
-export const Description = styled.p`
+const Description = styled.p`
 	line-height: 1.5;
 	font-size: 1.5rem;
 `
 
-export const Code = styled.code`
+const Code = styled.code`
 	background: #fafafa;
 	border-radius: 5px;
 	padding: 0.75rem;
@@ -83,7 +83,7 @@ export const Code = styled.code`
 		Bitstream Vera Sans Mono, Courier New, monospace;
 `
 
-export const Grid = styled.div`
+const Grid = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -97,7 +97,7 @@ export const Grid = styled.div`
 	}
 `
 
-export const CardAnchor = styled.a`
+const CardAnchor = styled.a`
 	margin: 1rem;
 	flex-basis: 45%;
 	padding: 1.5rem;
@@ -127,23 +127,41 @@ export const CardAnchor = styled.a`
 	}
 `
 
-export const Logo = styled.img`
+const Logo = styled.img`
 	height: 1em;
 `
 
-export const Section = styled.section`
+const Section = styled.section`
 	${utilStyles.headingMd}
 	${utilStyles.padding1px}
 `
 
-export const List = styled.ul`
+const List = styled.ul`
 	${utilStyles.list}
 `
 
-export const ListItem = styled.li`
+const ListItem = styled.li`
 	${utilStyles.listItem}
 `
 
-export const Small = styled.small`
+const Small = styled.small`
 	${utilStyles.lightText}
 `
+
+export default {
+	Container,
+	Main,
+	Footer,
+	Anchor,
+	Titles,
+	Heading2,
+	Description,
+	Code,
+	Grid,
+	CardAnchor,
+	Logo,
+	Section,
+	List,
+	ListItem,
+	Small,
+}

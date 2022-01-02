@@ -1,14 +1,9 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import {
-	BackToHome,
-	Container,
-	H1,
-	H2,
-	Header,
-	NameAnchor,
-	StyledImage,
-} from './Layout.css'
+
+import Style from './Layout.css'
+
+const { BackToHome, Container, H1, H2, Header, NameAnchor, StyledImage } = Style
 
 const name = 'Shu Uesugi'
 export const siteTitle = 'Next.js Sample Website'

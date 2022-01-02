@@ -1,9 +1,11 @@
 import Head from 'next/head'
+import Script from 'next/script'
 import Layout from '../../components/Layout'
 import Date from '../../components/Date'
-import { H1, DateContainer } from './[id].css'
+import Style from '../../styles/pages/posts'
 import { getAllPostIds, getPostData } from '../../lib/posts'
-import Script from 'next/script'
+
+const { H1, DateContainer } = Style
 
 const Post = ({ postData }) => {
 	const { date, title, contentHtml } = postData
@@ -41,7 +43,6 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async ({ params }) => {
-	// @ts-ignore
 	const postData = await getPostData(params.id)
 
 	return {
